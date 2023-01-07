@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta charset="utf-8" />
+      <meta
+        name="description"
+        content="Imagine being in a realionship with Lee Know"
+      />
+      <meta name="author" content="STAY" />
+      <title>!ee Know</title>
+
+      <link
+        rel="icon"
+        type="image/x-icon"
+        href="/scrollin galery.html/images/logo.jpg"
+      />
+      <link href="/scrollin galery.html/style.css" rel="stylesheet" />
+      <style>
+        body {
+          background-color: black;
+        }
+      </style>
+      <style>
+        .center {
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+          width: 50%;
+        }
+      </style>
+      <style>
+        .header {
+          position: fixed;
+          top: 0;
+          z-index: 1;
+          width: 100%;
+          background-color: #f1f1f1;
+        }
+
+        /* The progress container (grey background) */
+        .progress-container {
+          width: 100%;
+          height: 8px;
+          background: #ccc;
+        }
+
+        /* The progress bar (scroll indicator) */
+        .progress-bar {
+          height: 8px;
+          background: #bb77fa;
+          width: 0%;
+        }
+      </style>
+      <style>
+        body {
+          font-family: Arial;
+          margin: 0;
+        }
+
+        * {
+          box-sizing: border-box;
+        }
+
+        img {
+          vertical-align: middle;
+        }
+
+        /* Position the image container (needed to position the left and right arrows) */
+        .container {
+          position: relative;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+          display: none;
+        }
+
+        /* Add a pointer when hovering over the thumbnail images */
+        .cursor {
+          cursor: pointer;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+          cursor: pointer;
+          position: absolute;
+          top: 40%;
+          width: auto;
+          padding: 16px;
+          margin-top: -50px;
+          color: rgb(231, 158, 0);
+          font-weight: bold;
+          font-size: 20px;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+          -webkit-user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+          background-color: rgba(255, 233, 233, 0.8);
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+
+        /* Container for image text */
+        .caption-container {
+          text-align: center;
+          background-color: rgb(17, 17, 13);
+          padding: 2px 16px;
+          color: white;
+        }
+
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        /* Six columns side by side */
+        .column {
+          float: left;
+          width: 16.66%;
+        }
+
+        /* Add a transparency effect for thumnbail images */
+        .demo {
+          opacity: 0.6;
+        }
+
+        .active,
+        .demo:hover {
+          opacity: 1;
+        }
+      </style>
+      <style>
+        .glow {
+          font-size: 80px;
+          color: #fff;
+          text-align: center;
+          -webkit-animation: glow 1s ease-in-out infinite alternate;
+          -moz-animation: glow 1s ease-in-out infinite alternate;
+          animation: glow 1s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+          from {
+            text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
+              0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073,
+              0 0 70px #e60073;
+          }
+          to {
+            text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
+              0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6,
+              0 0 80px #ff4da6;
+          }
+        }
+      </style>
+      <style>
+        .flip-box {
+          background-color: transparent;
+          width: 500px;
+          height: 200px;
+          border: 1px solid #f1f1f1;
+          perspective: 500px;
+        }
+
+        .flip-box-inner {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.8s;
+          transform-style: preserve-3d;
+        }
+
+        .flip-box:hover .flip-box-inner {
+          transform: rotateY(180deg);
+        }
+
+        .flip-box-front,
+        .flip-box-back {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        }
+
+        .flip-box-front {
+          background-color: rgb(243, 181, 46);
+          color: black;
+        }
+
+        .flip-box-back {
+          background-color: #ff4da6;
+          color: white;
+          transform: rotateY(180deg);
+        }
+      </style>
+    </head>
+    <body>
+      <div class="topnav">
+        <a href="#home">Home</a>
+        <a href="#info">About</a>
+        <a href="#facts">Facts</a>
+      </div>
+      <div class="header">
+        <div class="progress-container">
+          <div class="progress-bar" id="myBar"></div>
+        </div>
+      </div>
+
+      <div>content...</div>
+      <div id="home">
+        <script>
+          // When the user scrolls the page, execute myFunction
+          window.onscroll = function () {
+            myFunction();
+          };
+
+          function myFunction() {
+            var winScroll =
+              document.body.scrollTop || document.documentElement.scrollTop;
+            var height =
+              document.documentElement.scrollHeight -
+              document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+          }
+        </script>
+        <h1 class="glow">Lee Know wor!d</h1>
+        <h2 style="text-align: center; color: coral">bf materials</h2>
+
+        <div class="container">
+          <div class="mySlides">
+            <div class="numbertext">1 / 6</div>
+            <img src="images/second.jpg" class="center" />
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">2 / 6</div>
+            <img src="images/third.jpg" class="center" />
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">3 / 6</div>
+            <img src="images/fourth.jpg" class="center" />
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">4 / 6</div>
+            <img src="images/fifth.jpg" class="center" />
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">5 / 6</div>
+            <img src="images/sixth.jpg" class="center" />
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">6 / 6</div>
+            <img src="images/seveth.jpg" class="center" />
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+
+          <div class="row">
+            <div class="column">
+              <img
+                class="demo cursor"
+                src="images/second.jpg"
+                style="width: 100%"
+                onclick="currentSlide(1)"
+                alt="Cutie"
+              />
+            </div>
+            <div class="column">
+              <img
+                class="demo cursor"
+                src="images/third.jpg"
+                style="width: 100%"
+                onclick="currentSlide(2)"
+                alt="Tsundere"
+              />
+            </div>
+            <div class="column">
+              <img
+                class="demo cursor"
+                src="images/fourth.jpg"
+                style="width: 100%"
+                onclick="currentSlide(3)"
+                alt="teasy-teasy"
+              />
+            </div>
+            <div class="column">
+              <img
+                class="demo cursor"
+                src="images/fifth.jpg"
+                style="width: 100%"
+                onclick="currentSlide(4)"
+                alt="Drive"
+              />
+            </div>
+            <div class="column">
+              <img
+                class="demo cursor"
+                src="images/sixth.jpg"
+                style="width: 100%"
+                onclick="currentSlide(5)"
+                alt="lovie"
+              />
+            </div>
+            <div class="column">
+              <img
+                class="demo cursor"
+                src="images/seveth.jpg"
+                style="width: 100%"
+                onclick="currentSlide(6)"
+                alt="walking green flag"
+              />
+            </div>
+          </div>
+        </div>
+
+        <script>
+          let slideIndex = 1;
+          showSlides(slideIndex);
+
+          function plusSlides(n) {
+            showSlides((slideIndex += n));
+          }
+
+          function currentSlide(n) {
+            showSlides((slideIndex = n));
+          }
+
+          function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("demo");
+            let captionText = document.getElementById("caption");
+            if (n > slides.length) {
+              slideIndex = 1;
+            }
+            if (n < 1) {
+              slideIndex = slides.length;
+            }
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
+          }
+        </script>
+      </div>
+      <div
+        style="
+          background-color: #bb77fa;
+          padding: 20px;
+          margin-top: 30px;
+          height: 30px;
+          text-align: center;
+          color: black;
+          font-family: monospace;
+          font-size: 18px;
+          text-decoration: black;
+        "
+      >
+        ~
+      </div>
+      <div id="info" style="padding: 20px; margin-top: 30px; height: 800px">
+        <ul
+          style="
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-family: monospace;
+            font-size: 29.85px;
+            padding: 25px;
+            width: 400px;
+            float: left;
+            list-style-type: circle;
+          "
+        >
+          <li>Stage Name: Lee Know (리노), formerly known as Minho (민호)</li>
+          <li>Birth Name: Lee Min Ho (이민호)</li>
+          <li>Birthday: October 25, 1998</li>
+          <li>Zodiac Sign: Scorpio</li>
+          <li>Height: 172 cm (5'8″)</li>
+          <li>MBTI Type: ISFP (His previous result was ESFJ)</li>
+          <li>Unit: Dance Racha</li>
+        </ul>
+
+        <img
+          src="images/first.jpg"
+          style="
+            padding: 50px;
+            width: 800px;
+            height: auto;
+            size: 25px 25px;
+            float: right;
+          "
+          alt="lee adorable"
+        />
+      </div>
+      <div
+        style="
+          background-color: rgb(187, 119, 250);
+          padding: 20px;
+          margin-top: 30px;
+          height: 30px;
+          text-align: center;
+          color: black;
+          font-family: monospace;
+          font-size: 18px;
+          text-decoration: black;
+        "
+        id="facts"
+      >
+        facts
+      </div>
+      <!--smth for a gallery with facts-->
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">
+              He graduated from the Department of Electronic Calculator in Gimpo
+              Jeil Technical High School.
+            </th>
+            <th scope="col">
+              He is raising three cats named Soonie, Doongie, and Dori.
+            </th>
+            <th scope="col">
+              Lee Know is part of Stray Kids dance sub-unit DANCERACHA.
+            </th>
+          </tr>
+          <tr>
+            <td style="height: 15%; width: 15%" rowspan="1">
+              <img
+                src="/scrollin galery.html/images/Без названия (8).jpg"
+                alt="Lee Know>"
+                style="display: block"
+                width="100%"
+                height="100%"
+              />
+            </td>
+            <td style="height: 15%; width: 15%" rowspan="1">
+              <img
+                src="/scrollin galery.html/images/Без названия (6).jpg"
+                alt="Lee Know>"
+                style="display: block"
+                width="100%"
+                height="100%"
+              />
+            </td>
+            <td style="height: 15%; width: 15%" rowspan="1">
+              <img
+                src="/scrollin galery.html/images/Без названия (5).jpg"
+                alt="Lee Know>"
+                style="display: block"
+                width="100%"
+                height="100%"
+              />
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="col">
+              His family consists of mother and father, Lee Know is an only
+              child.
+            </th>
+            <th scope="col">
+              His special skill is dancing with eyebrows and making
+              choreography.
+            </th>
+            <th scope="col">
+              Before his debut, he was the backup dancer for BTS. Lee Know even
+              went to Japan for the BTS' stage.
+            </th>
+          </tr>
+          <tr>
+            <td style="height: 15%; width: 15%" rowspan="1">
+              <img
+                src="/scrollin galery.html/images/Без названия (4).jpg"
+                alt="Lee Know>"
+                style="display: block"
+                width="100%"
+                height="100%"
+              />
+            </td>
+            <td rowspan="1" style="height: 15%; width: 15%">
+              <img
+                src="/scrollin galery.html/images/18cc13a2-fb66-4584-a19b-d6df86e86c76.jpg"
+                alt="Lee Know"
+                style="display: block"
+                width="100%"
+                height="100%"
+              />
+            </td>
+            <td rowspan="1" style="height: 15%; width: 15%">
+              <img
+                src="/scrollin galery.html/images/643c6fb8-5a9a-4973-855b-8cda070fdb73.jpg"
+                alt="Lee Know"
+                style="display: block"
+                width="100%"
+                height="100%"
+              />
+            </td>
+          </tr>
+          <tr>
+            <th scope="col">
+              Lee Know got the shortest training period out of all Stray Kids
+              members.
+            </th>
+            <th scope="col">
+              He is the visual line of Stray Kids alongside Hyunjin and Felix.
+            </th>
+            <th scope="col">
+              According to the members, he has a lot of aegyo.
+            </th>
+          </tr>
+          <tr>
+            <td style="height: 15%; width: 15%" rowspan="1">
+              <img
+                src="/scrollin galery.html/images/7320a675-9ecb-4020-8fff-bf12e9340db1.jpg"
+                alt="Lee Know>"
+                style="display: block"
+                width="100%"
+                height="100%"
+              />
+            </td>
+            <td rowspan="1" style="height: 15%; width: 15%">
+              <img
+                src="/scrollin galery.html/images/Simplifica SKZ.jpg"
+                alt="Lee Know"
+                style="display: block"
+                width="100%"
+                height="100%"
+              />
+            </td>
+            <td rowspan="1" style="height: 15%; width: 15%">
+              <img
+                src="/scrollin galery.html/images/6e0a9674-a1a6-4d0f-bcd3-03868608aafa.jpg"
+                alt="Lee Know"
+                style="display: block"
+                width="100%"
+                height="100%"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="background-color: cadetblue; height: auto; width: auto">
+        &lt; &lt; &lt; &copy;Ayperi &gt;&gt;&gt;
+      </div>
+    </body>
+  </html>
+</html>
